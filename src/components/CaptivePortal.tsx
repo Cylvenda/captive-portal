@@ -11,6 +11,7 @@ import { Wallet, WifiOff, Shield, ExternalLink, AlertCircle, BookOpen } from 'lu
 import { useNavigate } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 import axios from 'axios';
+import { assets } from '@/assets/assets';
 
 export const CaptivePortal = () => {
   const [manualAddress, setManualAddress] = useState('');
@@ -55,12 +56,12 @@ export const CaptivePortal = () => {
     setError(null);
     
     if (!manualAddress.trim()) {
-      setError('Please enter an Ethereum address.');
+      setError('Please enter an Wallet address.');
       return;
     }
     
     if (!validateEthereumAddress(manualAddress.trim())) {
-      setError('Please enter a valid Ethereum address.');
+      setError('Please enter a valid Wallet address.');
       return;
     }
     
@@ -120,15 +121,15 @@ export const CaptivePortal = () => {
 
         <Card className="portal-card animate-slide-up">
         <CardHeader className="text-center space-y-4">
-          <div className="mx-auto w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center animate-bounce-gentle">
-            <Shield className="w-10 h-10 text-primary" />
+          <div className="mx-auto w-24 h-20 bg-primary/10 p-2 shadow-2xl rounded-full flex items-center justify-center animate-bounce-gentle">
+            <img src={assets.ega} alt="e-GA" sizes="100"  />
           </div>
           <div>
             <CardTitle className="text-2xl font-bold mb-2">
-              Network Access Portal
+              RIDC Network Access Portal
             </CardTitle>
             <p className="text-muted-foreground">
-              Connect your Ethereum wallet to access the network
+              Connect your Wallet to access the network
             </p>
           </div>
         </CardHeader>
@@ -202,7 +203,7 @@ export const CaptivePortal = () => {
           </div>
           
           <div className="text-center text-xs text-muted-foreground">
-            <p>Secure connection via Ethereum wallet verification</p>
+            <p>Secure connection via valid blockchain wallet verification</p>
           </div>
         </CardContent>
         </Card>
