@@ -6,7 +6,62 @@
 
 @layer base {
   :root {
-    /* Crypto-inspired color palette */
+    /* Light mode - Crypto-inspired color palette */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Ethereum blue primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Purple accent for crypto theme */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 1rem;
+
+    /* Custom gradients for crypto theme - light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 95% 75%));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    
+    /* Shadows with crypto glow */
+    --shadow-primary: 0 10px 40px -10px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+    --shadow-glow: 0 0 50px hsl(217 91% 60% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Success and warning colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+  }
+
+  .dark {
+    /* Dark mode - Crypto-inspired color palette */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
@@ -37,9 +92,7 @@
     --input: 240 5% 26%;
     --ring: 217 91% 60%;
 
-    --radius: 1rem;
-
-    /* Custom gradients for crypto theme */
+    /* Custom gradients for crypto theme - dark mode */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 95% 75%));
     --gradient-background: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 10% 8%));
     --gradient-card: linear-gradient(135deg, hsl(240 10% 6%), hsl(240 10% 10%));
@@ -48,16 +101,6 @@
     --shadow-primary: 0 10px 40px -10px hsl(217 91% 60% / 0.3);
     --shadow-card: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
     --shadow-glow: 0 0 50px hsl(217 91% 60% / 0.4);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
-    /* Success and warning colors */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 98%;
   }
 }
 
